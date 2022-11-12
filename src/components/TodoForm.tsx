@@ -1,21 +1,40 @@
-import React, { useRef } from 'react'
-import {todoToAdd} from '../utils/state'
+import React from 'react'
+import {todos} from '../utils/state';
+import {Todo} from '../utils/types';
+
 const TodoForm = () => {
 
-  // let title = useRef('');
-  // let description = useRef('');
+  const createTodo = (title:string, desc:{ value: string; } | undefined):Todo => {
+    return {
+      id: window.crypto.randomUUID(), 
+      title, 
+      description: desc ? desc.value : desc, 
+      date: new Date(),
+      done: false
+    }
+  }
 
-  const addTodoHandler = ():void => {
-    console.log('you clicked the add button');
-    
+  const addTodoHandler = (e: React.SyntheticEvent):void => {
+    e.preventDefault();
+  
+    const todoData = e.target as typeof e.target & {
+      title: {value: string},
+      desc?: {value: string}
+    };
+    const todoToAdd:Todo = createTodo(todoData.title.value, todoData.desc);
+    todos.value = [...todos.value, todoToAdd];    
+    todoData.title.value = '';
+    if(todoData.desc){
+      todoData.desc.value = '';
+    }
   }
 
   return (
-    <section>
-      {/* <input type="text" placeholder="Title" ref={title} />
-      <input type="text" placeholder="Description" value={description.current}/> */}
-      <button onClick={addTodoHandler}>Add to list</button>
-    </section>
+    <form onSubmit={addTodoHandler}>
+      <input type="text" placeholder="Title" id="todoFormTitle" name="title" required/>
+      <input type="text" placeholder="Description" id="todoFormDesc" name="desc"/>
+      <button type="submit" >Add to list</button>
+    </form>
   )
 }
 
