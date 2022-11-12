@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
@@ -10,7 +10,7 @@ function App() {
     <main className="App">
       <TodoForm/>
       <TodoList/>
-      <Counter/>
+      {/* <Counter/> */}
     </main>
   );
 }

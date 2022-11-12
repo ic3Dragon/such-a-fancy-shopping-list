@@ -1,5 +1,5 @@
-export type Todo = {
-  id: number,
+export interface Todo {
+  id: string,
   date: Date,
   title: string, 
   description?: string,
