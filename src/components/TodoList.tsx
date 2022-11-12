@@ -1,19 +1,16 @@
 import React from 'react'
 import {Todo} from '../utils/types'
 import {todos} from '../utils/state';
+import TodoCard from './TodoCard';
 
 const TodoList = () => {
   return (
     <section>
-      TodoList goes here
+      <h1>{todos.value.length > 0 ? 'All the things to do' : 'Everything is done for now'}</h1>
       {todos.value && todos.value.map((todo:Todo) => (
-        <article>
-          <h3>{todo.title}</h3>
-          <p>{todo.description}</p>
-          <p>{todo.date.toString()}</p>
-        </article>),
-      )
-      }
+       <TodoCard todo={todo}/>
+        ),
+      )}
     </section>
   )
 }

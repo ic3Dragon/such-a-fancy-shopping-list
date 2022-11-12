@@ -1,9 +1,14 @@
 import React from 'react'
+import {Todo} from '../utils/types'
 
-const Todo = () => {
+const TodoCard = ({todo: {id, title, description, date, done}}: {todo: Todo}) => {
   return (
-    <div>Todo</div>
+    <article key={id} className={done ? '--done': ''}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <p>{date.toLocaleString('en-GB', { hour12: false })}</p>
+        </article>
   )
 }
 
-export default Todo
+export default TodoCard
