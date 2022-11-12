@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
-import Buttons from './components/buttons';
-import count from './count'
+import Counter from './components/Counter';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 function App() {
 
   return (
-    <div className="App">
-      <h1>{count.value}</h1>
-      <Buttons/>
-    </div>
+    <main className="App">
+      <TodoForm/>
+      <TodoList/>
+      <Counter/>
+    </main>
   );
 }
 
