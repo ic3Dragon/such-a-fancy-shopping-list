@@ -1,0 +1,16 @@
+.list__header{
+  justify-self: center;
+  gap: 0.5rem;
+}
+
+.list__todo-count {
+  color:rgb(221, 221, 221);
+}
+
+.todo-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60vw;
+}
