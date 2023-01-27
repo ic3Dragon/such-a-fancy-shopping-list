@@ -1,18 +1,21 @@
 import React from 'react';
 import './App.css';
-// import Counter from './components/Counter';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
+import { Todo } from './utils/types';
 
-function App() {
-
-  return (
-    <main className="App">
-      <TodoForm/>
-      <TodoList/>
-      {/* <Counter/> */}
-    </main>
-  );
+export const updateStorage = (todoList: Todo[]) => {
+  localStorage.setItem('todos', JSON.stringify(todoList))
 }
+
+const App = () => (
+  <main className="App">
+    <header className="header">
+      <h1 className="header__title">Fancy Todos</h1>
+    </header>
+    <TodoForm/>
+    <TodoList/>
+  </main>
+);
 
 export default App;
