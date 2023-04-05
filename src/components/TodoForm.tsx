@@ -1,5 +1,4 @@
-import React from 'react'
-import './TodoForm.css';
+import './TodoForm.scss';
 import { updateStorage } from '../App';
 import {todos} from '../utils/state';
 import {Todo} from '../utils/types';
@@ -39,7 +38,7 @@ const addTodoHandler = (e: React.SyntheticEvent):void => {
 const TodoForm = () => (
   <form onSubmit={addTodoHandler} className="todo-form">
     <input type="text" placeholder="Title" className="todo-form__input" id="todoFormTitle" name="title" autoFocus required/>
-    <input type="text" placeholder="Description" className="todo-form__input" id="todoFormDesc" name="desc"/>
+    <input type="text" placeholder="Description" className="todo-form__input" id="todoFormDesc" name="desc" autoComplete="off"/>
     <button type="submit" className="button todo-form__add-button">Add to list</button>
   </form>
 );

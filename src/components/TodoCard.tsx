@@ -1,5 +1,4 @@
-import React from 'react'
-import './TodoCard.css';
+import './TodoCard.scss';
 import {Todo} from '../utils/types'
 import {todos} from '../utils/state';
 import { updateStorage } from '../App';
@@ -24,11 +23,11 @@ const TodoCard = ({todo: {id, title, description, date, time, done}}: {todo: Tod
   }
   
   return (
-    <article className={`todo ${done && 'todo--done'}`}>
+    <article className={`todo ${done ? 'todo--done' : ''}`}>
           <h3 className="todo__title">{title}</h3>
+          <p className="todo__date">{date} - {time}</p>
           {description && <p className="todo__desc">{description}</p>}
-          <p className="todo__date">{date}</p>
-          {time && <p className="todo__time">{time}</p>}
+          <section className="todo__buttons">
           <button 
             className='button todo__done-button'
             onClick={setDone}
@@ -36,6 +35,7 @@ const TodoCard = ({todo: {id, title, description, date, time, done}}: {todo: Tod
             {done ? 'Undo' : 'Done'}
           </button>
           {done && <button className="button todo__delete-button" onClick={deleteTodo}>Delete</button>}
+          </section>
         </article>
   )
 }
