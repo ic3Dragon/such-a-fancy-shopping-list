@@ -1,0 +1,75 @@
+.todo {
+  background-color: #98cbf3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-shadow: rgb(6, 5, 5, 0.8) 0px 2px 8px 0px;
+  height: 25ch;
+}
+
+.todo--done{
+  background-color: #a8df8c;
+  order: 1;
+}
+
+ .todo__title {
+  display: -webkit-box;
+  cursor: default;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  &:hover {
+    display: block;
+    overflow: visible;
+  }
+ }
+
+ .todo__desc {
+  display: -webkit-box;
+  cursor: default;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  &:hover {
+    display: block;
+    overflow: visible;
+
+  }
+ }
+
+.todo__date {
+  order: -1;
+  align-self: flex-end;
+}
+
+.todo__time {
+  order: -1;
+  align-self: flex-end;
+} 
+
+.todo__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-self: flex-end;
+}
+
+.todo__done-button {
+  align-self: flex-end;
+}
+
+/* .todo__done-button--done {} */
+
+.todo__delete-button {
+  align-self: flex-start;
+}
+
+.todo__delete-button, .todo__done-button {
+  width: 8ch;
+}
+.todo__delete-button:hover {
+  background-color: rgb(187, 74, 57);
+}

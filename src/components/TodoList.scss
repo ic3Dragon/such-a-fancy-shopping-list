@@ -9,10 +9,23 @@
 
 .todo-list {
   margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   width: 75vw;
   max-width: 435px;
   min-width: 250px;
+}
+
+.--flex{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.--grid{
+  border: 2px dotted orangered;
+}
+
+.--block{
+  .todo {
+    margin-bottom: 1rem;
+  }
 }
