@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-signal-ts-todo/static/css/main.f0804a1f.css",
-    "main.js": "/react-signal-ts-todo/static/js/main.901dff13.js",
+    "main.js": "/react-signal-ts-todo/static/js/main.cdeed88f.js",
     "index.html": "/react-signal-ts-todo/index.html",
     "main.f0804a1f.css.map": "/react-signal-ts-todo/static/css/main.f0804a1f.css.map",
-    "main.901dff13.js.map": "/react-signal-ts-todo/static/js/main.901dff13.js.map"
+    "main.cdeed88f.js.map": "/react-signal-ts-todo/static/js/main.cdeed88f.js.map"
   },
   "entrypoints": [
     "static/css/main.f0804a1f.css",
-    "static/js/main.901dff13.js"
+    "static/js/main.cdeed88f.js"
   ]
 }
