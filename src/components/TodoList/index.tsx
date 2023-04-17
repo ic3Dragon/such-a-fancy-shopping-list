@@ -18,16 +18,14 @@ const TodoList = () => {
   return (
     <>
     <header className="list__header">
-      <h2>{todos.value.length > 0 ? 'All the things to do' : 'Everything is done for now'}</h2>
-      {completedTodos > 0 && <p className="list__todo-count"> Completed todos: {completedTodos}</p>}
-      {nrTodosLeft > 0 && <p className="list__todo-count"> Remaing things on list: {nrTodosLeft}</p>}
+      <h2 className="list__title">{todos.value.length > 0 ? 'All the things' : 'Everything is done for now!'}</h2>
+      {completedTodos > 0 && <p className="list__todo-count"> Completed: {completedTodos}</p>}
+      {nrTodosLeft > 0 && <p className="list__todo-count"> Remaing: {nrTodosLeft}</p>}
     </header>
       <section key="todoList" className={`todo-list --${display}`}>
         {
           todos.value && checkIfBlock().map((todo:Todo, i) => (
-          <>
             <TodoCard todo={todo} key={todo.id} todoIndex={i}/>
-          </>
             ),
         )}
       </section>
