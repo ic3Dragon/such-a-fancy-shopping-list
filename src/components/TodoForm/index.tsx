@@ -1,7 +1,7 @@
 import './TodoForm.scss';
-import { updateStorage } from '../App';
-import {todos} from '../utils/state';
-import {Todo} from '../utils/types';
+import { updateStorage } from '../../App';
+import {todos} from '../../utils/state';
+import {Todo} from '../../utils/types';
 
 const createTodo = (title:string, desc:{ value: string; } | undefined):Todo => {
   const now: string[] = new Date().toLocaleString('en-GB', { hour12: false }).split(',');

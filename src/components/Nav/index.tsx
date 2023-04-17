@@ -1,5 +1,5 @@
 import './Nav.scss';
-import { display } from '../utils/state';
+import { display } from '../../utils/state';
 
 const Nav = () => {
 

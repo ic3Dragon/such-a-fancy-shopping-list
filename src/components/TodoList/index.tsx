@@ -1,7 +1,7 @@
 import './TodoList.scss';
-import {Todo} from '../utils/types'
-import {todos, display} from '../utils/state';
-import TodoCard from './TodoCard';
+import {Todo} from '../../utils/types'
+import {todos, display} from '../../utils/state';
+import TodoCard from '../TodoCard';
 
 const TodoList = () => {
   const nrTodosLeft: number = todos.value.filter(todo => todo.done !== true).length;
@@ -24,8 +24,10 @@ const TodoList = () => {
     </header>
       <section key="todoList" className={`todo-list --${display}`}>
         {
-          todos.value && checkIfBlock().map((todo:Todo) => (
-          <TodoCard todo={todo} key={todo.id}/>
+          todos.value && checkIfBlock().map((todo:Todo, i) => (
+          <>
+            <TodoCard todo={todo} key={todo.id} todoIndex={i}/>
+          </>
             ),
         )}
       </section>
