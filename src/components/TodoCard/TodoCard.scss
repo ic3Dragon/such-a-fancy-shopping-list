@@ -12,6 +12,13 @@
 .todo--done{
   background-color: #a8df8c;
   order: 1;
+
+  .todo__title {
+    text-decoration:line-through;
+  }
+  .todo__desc {
+    display: none;
+  }
 }
 
  .todo__title {
