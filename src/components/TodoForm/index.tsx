@@ -38,7 +38,7 @@ const addTodoHandler = (e: React.SyntheticEvent):void => {
 const TodoForm = () => (
   <form onSubmit={addTodoHandler} className="todo-form">
     <input type="text" placeholder="Title" className="todo-form__input" id="todoFormTitle" name="title" autoFocus required/>
-    <input type="text" placeholder="Description" className="todo-form__input" id="todoFormDesc" name="desc" autoComplete="off"/>
+    <textarea placeholder="Description" className="todo-form__input todo-form__input--desc" id="todoFormDesc" name="desc" autoComplete="off"/>
     <button type="submit" className="button todo-form__add-button">Add to list</button>
   </form>
 );

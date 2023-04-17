@@ -1,9 +1,10 @@
 .todo-form {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
   align-items: center;
+  background-color: #5b6476;
 }
 
 .todo-form__input {
@@ -14,7 +15,20 @@
  padding: 0 1ch;
 }
 
+.todo-form__input--desc{
+  height: 8ch;
+  width: 30ch;
+  font-family: inherit;
+  font-weight: 2rem;
+  resize: none;
+  padding: 0 1ch;
+  border: none;
+}
+
 .todo-form__input:focus, .todo-form__input:hover, .todo-form__input:active  {
   outline: none;
+}
+
+.todo-form__input:hover{
   background-color: rgb(180, 253, 229);
 }
