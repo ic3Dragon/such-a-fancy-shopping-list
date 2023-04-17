@@ -12,5 +12,5 @@ export const count = signal<number>(0);
 
 export const todos = signal<Todo []>(getTodos());
 
-export const display = signal<String>('flex');
+export const display = signal<String>('block');
   
