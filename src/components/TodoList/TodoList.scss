@@ -21,7 +21,8 @@
 }
 
 .--grid{
-  border: 2px dotted orangered;
+  display: grid;
+  gap: 1rem;
 }
 
 .--block{
