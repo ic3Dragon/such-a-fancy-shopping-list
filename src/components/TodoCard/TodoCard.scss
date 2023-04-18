@@ -1,4 +1,5 @@
 .todo {
+  text-align: left;
   background-color: #98cbf3;
   display: flex;
   flex-direction: column;
@@ -6,7 +7,7 @@
   justify-content: space-between;
   padding: 1rem;
   box-shadow: rgb(6, 5, 5, 0.8) 0px 2px 8px 0px;
-  height: 25ch;
+  height: max-content;
 }
 
 .todo--done{
@@ -25,24 +26,30 @@
   display: -webkit-box;
   cursor: default;
   overflow: hidden;
-  -webkit-line-clamp: 2;
+  margin-top: .3rem;
+  padding-inline: 1rem;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  // &:hover {
-  //   display: block;
-  //   overflow: visible;
-  // }
+  width: 100%;
+  &:hover {
+    display: block;
+    overflow: visible;
+  }
  }
 
  .todo__desc {
   display: -webkit-box;
   cursor: default;
   overflow: hidden;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  // &:hover {
-  //   display: block;
-  //   overflow: visible;
-  // }
+  margin-top: .3rem;
+  padding-inline: 1rem;
+  width: 100%;
+  &:hover {
+    display: block;
+    overflow: visible;
+  }
  }
 
 .todo__header {
@@ -52,35 +59,29 @@
   width: 100%;
   justify-content: space-between;
 }
-// .todo__date {
-
-// }
+// .todo__date {}
 
 .todo__index-order {
   font-weight: 600;
 }
 
-// .todo__time {
-
-// } 
+// .todo__time {} 
 
 .todo__buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 1.2rem;
   width: 100%;
   align-self: flex-end;
+  margin-top: .6rem;
 }
 
-.todo__done-button {
-  align-self: flex-end;
-}
+// .todo__done-button {}
 
 /* .todo__done-button--done {} */
 
-.todo__delete-button {
-  align-self: flex-start;
-}
+// .todo__delete-button {}
 
 .todo__delete-button, .todo__done-button {
   width: 8ch;
