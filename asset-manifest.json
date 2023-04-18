@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-signal-ts-todo/static/css/main.e2c725c8.css",
-    "main.js": "/react-signal-ts-todo/static/js/main.de24de4f.js",
+    "main.css": "/react-signal-ts-todo/static/css/main.b4e91163.css",
+    "main.js": "/react-signal-ts-todo/static/js/main.f0b9d905.js",
     "index.html": "/react-signal-ts-todo/index.html",
-    "main.e2c725c8.css.map": "/react-signal-ts-todo/static/css/main.e2c725c8.css.map",
-    "main.de24de4f.js.map": "/react-signal-ts-todo/static/js/main.de24de4f.js.map"
+    "main.b4e91163.css.map": "/react-signal-ts-todo/static/css/main.b4e91163.css.map",
+    "main.f0b9d905.js.map": "/react-signal-ts-todo/static/js/main.f0b9d905.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2c725c8.css",
-    "static/js/main.de24de4f.js"
+    "static/css/main.b4e91163.css",
+    "static/js/main.f0b9d905.js"
   ]
 }
