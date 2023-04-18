@@ -19,6 +19,7 @@ const TodoList = () => {
     <>
     <header className="list__header">
       <h2 className="list__title">{todos.value.length > 0 ? 'All the things' : 'Everything is done for now!'}</h2>
+      {todos.value.length < 1 ? <h3 className="list__text--get-started">- Add some todos and get started! -</h3> : '' }
       {completedTodos > 0 && <p className="list__todo-count"> Completed: {completedTodos}</p>}
       {nrTodosLeft > 0 && <p className="list__todo-count"> Remaing: {nrTodosLeft}</p>}
     </header>
