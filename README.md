@@ -17,9 +17,6 @@ View the deployed app here: [Ic3dragon's Fancy Todos](https://ic3Dragon.github.i
 
 ## Future Plans
 
-- Improve the visual of the todo cards.
 - Add E2E tests so that you can see the effect different display methods have on your testing. And show how to write tests for different options.
 - Setup CI/CD
 - Add edit Todo button
-- Hover Todo to display the logical order or elements. Maybe use the Todo index & ::before
-- Make mobile friendly 
