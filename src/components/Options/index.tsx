@@ -5,11 +5,11 @@ const Options = () => {
 const renderOptionsText = () => {
   switch(display.value) {
     case 'flex': 
-      return 'using flex';
+      return 'Using flex and the order property can be great for accessibility if used correctly. \n\nIn this example, however, the visual order of the elements and the logical order of the elements do not match. If you are using a screenreader or a keyboard to navigate the page the results will be weird.';
     case 'grid': 
-      return 'using grid';
+      return 'Using grid and the order property creates the same problem as using flex and order. It can be great for accessibility when you want content to be logically after or bellow something else but visually appear before it. \n\nIn this example, however, the visual order of the elements and the logical order of the elements do not match. Try marking a few todo\'s as done and tabbing between them.';
     default: 
-      return 'Using JavaScript to order the elements in the array before rendering creates a logically consistent and improves accessibility '
+      return 'Using JavaScript to order the elements in the array before rendering creates logically and visuall consistency and improves accessibility.'
   }
 }
   return (

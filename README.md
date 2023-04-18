@@ -19,4 +19,4 @@ View the deployed app here: [Ic3dragon's Fancy Todos](https://ic3Dragon.github.i
 
 - Add E2E tests so that you can see the effect different display methods have on your testing. And show how to write tests for different options.
 - Setup CI/CD
-- Add edit Todo button
+- Add edit Todo button (started)

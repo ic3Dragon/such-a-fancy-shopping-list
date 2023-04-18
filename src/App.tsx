@@ -23,8 +23,8 @@ const App = () => (
       <h1 className="header__title">Fancy Todos</h1>
     </header>
     <TodoForm/>
-    <Options />
     <TodoList/>
+    <Options />
     <a className="header__github-link" href="https://github.com/ic3Dragon/react-signal-ts-todo" target="_blank" rel="noreferrer">{githubLogo}<p>View the code on GitHub</p></a>
   </main>
 );
