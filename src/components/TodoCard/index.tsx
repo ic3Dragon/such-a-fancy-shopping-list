@@ -22,12 +22,12 @@ const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}:
     updateStorage(todos.value);
   }
 
-  const expandTodo = (e: React.SyntheticEvent) => {
-    e.stopPropagation();
-  }
+const editTodo = (e: React.SyntheticEvent) => {
+  e.stopPropagation();
+}
   
   return (
-    <article className={`todo ${done ? 'todo--done' : ''}`} onClick={expandTodo}>
+    <article className={`todo ${done ? 'todo--done' : ''}`}>
       <header className="todo__header">
         <p className="todo__index-order">{todoIndex +1}</p>
         <p className="todo__date">{date} - {time}</p>
@@ -41,6 +41,7 @@ const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}:
       >
         {done ? 'Undo' : 'Done'}
       </button>
+      <button className="button todo__edit-button" hidden onClick={editTodo}>Edit</button>
       {done && <button className="button todo__delete-button" onClick={deleteTodo}>Delete</button>}
       </section>
     </article>
