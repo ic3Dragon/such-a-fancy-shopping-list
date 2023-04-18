@@ -30,8 +30,12 @@
 
 .options__button {
   width: 15ch;
-}
 
-.options__button:hover {
-  background-color: orange;
+  &.--active {
+    background-color: orange;
+    text-decoration: underline;
+  }
+  &:hover {
+    background-color: orange;
+  }
 }
