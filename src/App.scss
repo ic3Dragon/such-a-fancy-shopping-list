@@ -37,3 +37,20 @@
   transform: scale(1.04);
   transition: all 0.3s;
 }
+
+.header__github-link {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+  &:hover {
+    color:rgb(57, 187, 143);
+  }
+  .header__github {
+    &:hover {
+      padding: -10px;
+      border-radius: 50%;
+      background-color: rgb(57, 187, 143);
+    }
+  }
+
+}
