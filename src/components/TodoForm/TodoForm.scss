@@ -10,19 +10,19 @@
 .todo-form__input {
  width: 30ch;
  height: 4ch;
- border-radius: 0;
  border: none;
- padding: 0 1ch;
+ padding: 1ch;
+ font-size: .9rem;
 }
 
 .todo-form__input--desc{
   height: 8ch;
   width: 30ch;
   font-family: inherit;
-  font-weight: 2rem;
+  font-weight: 200;
+  font-size: 1rem;
+  padding: 1ch;
   resize: none;
-  padding: 0 1ch;
-  border: none;
 }
 
 .todo-form__input:focus, .todo-form__input:hover, .todo-form__input:active  {

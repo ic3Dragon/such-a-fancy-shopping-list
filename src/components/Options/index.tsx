@@ -18,7 +18,7 @@ const renderOptionsText = () => {
       <ul className="options__buttons">
         <button className={`options__button button ${display.value === 'block' ? '--active': ''}`} onClick={()=> display.value = 'block'}>Use JavaScript</button>
         <button className={`options__button button ${display.value === 'flex' ? '--active': ''}`} onClick={()=> display.value = 'flex'}>Use Flex</button>
-        <button className={`options__button button ${display.value === 'grid' ? '--active': ''}`} onClick={()=> display.value = 'block'}>Use Grid</button>
+        <button className={`options__button button ${display.value === 'grid' ? '--active': ''}`} onClick={()=> display.value = 'grid'}>Use Grid</button>
       </ul>
       <p className="options__text">{renderOptionsText()}</p>
   </div>
