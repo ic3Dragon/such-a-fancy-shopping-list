@@ -22,34 +22,20 @@
   }
 }
 
- .todo__title {
+ .todo__text {
   display: -webkit-box;
   cursor: default;
   overflow: hidden;
+  overflow-wrap: break-word;
   margin-top: .3rem;
   padding-inline: 1rem;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   width: 100%;
-  &:hover {
-    display: block;
-    overflow: visible;
-  }
- }
-
- .todo__desc {
-  display: -webkit-box;
-  cursor: default;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  margin-top: .3rem;
-  padding-inline: 1rem;
-  width: 100%;
-  &:hover {
-    display: block;
-    overflow: visible;
-  }
+  // &:hover {
+  //   display: block;
+  //   overflow: visible;
+  // }
  }
 
 .todo__header {

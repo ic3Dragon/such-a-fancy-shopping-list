@@ -3,7 +3,6 @@ import {Todo} from '../../utils/types'
 import {todos} from '../../utils/state';
 import { updateStorage } from '../../App';
 
-
 const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}: {todo: Todo, todoIndex:number}) => {
   const setDone = (e: React.SyntheticEvent) => {
       e.stopPropagation();
@@ -21,10 +20,10 @@ const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}:
     todos.value = todos.value.filter(todo => todo.id !== id);
     updateStorage(todos.value);
   }
-
-const editTodo = (e: React.SyntheticEvent) => {
-  e.stopPropagation();
-}
+  
+  const editTodo = (e: React.SyntheticEvent) => {
+    e.stopPropagation();
+  }
   
   return (
     <article className={`todo ${done ? 'todo--done' : ''}`}>
@@ -32,8 +31,8 @@ const editTodo = (e: React.SyntheticEvent) => {
         <p className="todo__index-order">{todoIndex +1}</p>
         <p className="todo__date">{date} - {time}</p>
       </header>
-      <h3 className="todo__title">{title}</h3>
-      {description && <p className="todo__desc">{description}</p>}
+      <h3 className="todo__text">{title}</h3>
+      {description && <p className="todo__text">{description}</p>}
       <section className="todo__buttons">
       <button 
         className='button todo__done-button'
