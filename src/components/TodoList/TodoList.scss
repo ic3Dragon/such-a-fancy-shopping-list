@@ -37,6 +37,11 @@
 .--grid{
   display: grid;
   gap: 1rem;
+  .todo{
+    width: 75vw;
+    max-width: 435px;
+    min-width: 250px;
+  }
 }
 
 .--block{

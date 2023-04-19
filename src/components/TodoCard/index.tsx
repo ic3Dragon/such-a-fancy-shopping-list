@@ -31,8 +31,8 @@ const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}:
         <p className="todo__index-order">{todoIndex +1}</p>
         <p className="todo__date">{date} - {time}</p>
       </header>
-      <h3 className="todo__text">{title}</h3>
-      {description && <p className="todo__text">{description}</p>}
+      <h3 className="todo__text todo__title">{title}</h3>
+      {description && <p className="todo__text todo__desc">{description}</p>}
       <section className="todo__buttons">
       <button 
         className='button todo__done-button'
