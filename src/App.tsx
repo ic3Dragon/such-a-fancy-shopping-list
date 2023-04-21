@@ -1,10 +1,10 @@
 import './App.scss';
-import TodoForm from './components/TodoForm';
+import AddItemForm from './components/AddItemForm';
 import TodoList from './components/TodoList';
-import { Todo } from './utils/types';
+import { ListItem } from './utils/types';
 import Options from './components/Options';
 
-export const updateStorage = (todoList: Todo[]) => {
+export const updateStorage = (todoList: ListItem[]) => {
   localStorage.setItem('todos', JSON.stringify(todoList))
 }
 
@@ -20,12 +20,12 @@ const githubLogo = <svg
 const App = () => (
   <main className="App">
     <header className="header">
-      <h1 className="header__title">Fancy Todos</h1>
+      <h1 className="header__title">Shopping List</h1>
     </header>
-    <TodoForm/>
+    <AddItemForm/>
     <TodoList/>
     <Options />
-    <a className="header__github-link" href="https://github.com/ic3Dragon/react-signal-ts-todo" target="_blank" rel="noreferrer">{githubLogo}<p>View the code on GitHub</p></a>
+    <a className="main__github-link" href="https://github.com/ic3Dragon/such-a-fancy-shopping-list" target="_blank" rel="noreferrer">{githubLogo}<p>View the code on GitHub</p></a>
   </main>
 );
 

@@ -3,7 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  border: 2px solid white;
+  min-height: 100vh;
 }
 
 .header {
@@ -27,7 +28,6 @@
   font-weight: 500;
   transition: all 0.3s;
   width: 15ch;
-  /* box-shadow: rgba(2, 2, 2, 0.738) 0px 2px 8px 0px; */
   box-shadow: rgb(6, 5, 5, 0.8) 0px 2px 8px 0px;
   cursor: pointer;
 }
@@ -38,19 +38,21 @@
   transition: all 0.3s;
 }
 
-.header__github-link {
-  margin-top: 1rem;
+.main__github-link {
+  bottom: 1rem;
+  margin-block: 2rem;
+  justify-self: flex-end;
   font-size: 1rem;
   color: white;
+
+  .header__github {
+    padding: -10px;
+    border-radius: 50%;
+  }
   &:hover {
     color:rgb(57, 187, 143);
-  }
-  .header__github {
-    &:hover {
-      padding: -10px;
-      border-radius: 50%;
+    .header__github{
       background-color: rgb(57, 187, 143);
     }
   }
-
 }
