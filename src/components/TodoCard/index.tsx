@@ -1,24 +1,24 @@
 import './TodoCard.scss';
-import {Todo} from '../../utils/types'
-import {todos} from '../../utils/state';
+import {ListItem} from '../../utils/types'
+import {shoppingList} from '../../utils/state';
 import { updateStorage } from '../../App';
 
-const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}: {todo: Todo, todoIndex:number}) => {
+const TodoCard = ({todo: {id, title, notes, date, time, bought}, todoIndex}: {todo: ListItem, todoIndex:number}) => {
   const setDone = (e: React.SyntheticEvent) => {
       e.stopPropagation();
-      todos.value = todos.value.map(todo => {
+      shoppingList.value = shoppingList.value.map(todo => {
         if(todo.id !== id){
           return todo
         }
-        return {...todo, done: !todo.done}
+        return {...todo, bought: !todo.bought}
       });
-      updateStorage(todos.value);
+      updateStorage(shoppingList.value);
     }
   
   const deleteTodo = (e: React.SyntheticEvent) => {
     e.stopPropagation();
-    todos.value = todos.value.filter(todo => todo.id !== id);
-    updateStorage(todos.value);
+    shoppingList.value = shoppingList.value.filter(todo => todo.id !== id);
+    updateStorage(shoppingList.value);
   }
   
   const editTodo = (e: React.SyntheticEvent) => {
@@ -26,22 +26,22 @@ const TodoCard = ({todo: {id, title, description, date, time, done}, todoIndex}:
   }
   
   return (
-    <article className={`todo ${done ? 'todo--done' : ''}`}>
+    <article className={`todo ${bought ? 'todo--bought' : ''}`}>
       <header className="todo__header">
         <p className="todo__index-order">{todoIndex +1}</p>
         <p className="todo__date">{date} - {time}</p>
       </header>
       <h3 className="todo__text todo__title">{title}</h3>
-      {description && <p className="todo__text todo__desc">{description}</p>}
+      {notes && <p className="todo__text todo__desc">{notes}</p>}
       <section className="todo__buttons">
       <button 
-        className='button todo__done-button'
+        className='button todo__bought-button'
         onClick={setDone}
       >
-        {done ? 'Undo' : 'Done'}
+        {bought ? 'Undo' : 'Done'}
       </button>
       <button className="button todo__edit-button" hidden onClick={editTodo}>Edit</button>
-      {done && <button className="button todo__delete-button" onClick={deleteTodo}>Delete</button>}
+      {bought && <button className="button todo__delete-button" onClick={deleteTodo}>Delete</button>}
       </section>
     </article>
   )
