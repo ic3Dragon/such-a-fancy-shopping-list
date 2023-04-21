@@ -1,8 +1,8 @@
-export type Todo = {
+export type ListItem = {
   id: string,
   date: string,
   time: string,
   title: string, 
-  description?: string,
-  done: boolean
+  notes?: string,
+  bought: boolean
 };

@@ -1,16 +1,16 @@
 import { signal } from "@preact/signals-react";
-import { Todo } from './types';
+import { ListItem } from './types';
 
-const getTodos = () => {
-  const storedTodos: string = localStorage.getItem('todos') || '';
-    if(storedTodos){
-      return JSON.parse(storedTodos);
+const getList = () => {
+  const storedListItems: string = localStorage.getItem('shoppingList') || '';
+    if(storedListItems){
+      return JSON.parse(storedListItems);
     }
     return [];
   }
 export const count = signal<number>(0);
 
-export const todos = signal<Todo []>(getTodos());
+export const todos = signal<ListItem []>(getList());
 
 export const display = signal<String>('block');
   
