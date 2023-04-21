@@ -1,6 +1,6 @@
-# My Fancy Todos
+# such a Fancy Shopping List
 
-This project was created in part for me to practice typescript and using Preact Signals for state management. My goal was to keep it simple, clean and readable. It has grown to be a todo app that displays the different effects display options have on content.
+This project was created in part for me to practice typescript and using Preact Signals for state management. My goal was to keep it simple, clean and readable. It has grown to be a shopping list app that displays the different effects the display options have on content.
 
 Even if the end result looks the same it has quite a big effect on accessibility and should be something you consider when creating web applications.
 
