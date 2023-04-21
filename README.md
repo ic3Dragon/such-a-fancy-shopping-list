@@ -6,7 +6,7 @@ Even if the end result looks the same it has quite a big effect on accessibility
 
 You will mainly notice the difference if you have a screen reader or you are using the keyboard to navigate the elements or by inspecting the page and checking out the rendered html.
 
-View the deployed app here: [Ic3dragon's Fancy Shopping List](https://ic3Dragon.github.io/react-signal-ts-todo)
+View the deployed app here: [Ic3dragon's Fancy Shopping List](https://ic3dragon.github.io/such-a-fancy-shopping-list/)
 
 ## Tech Stack
 
