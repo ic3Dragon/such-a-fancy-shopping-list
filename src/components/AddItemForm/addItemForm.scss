@@ -1,4 +1,4 @@
-.todo-form {
+.add-item-form {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   background-color: #5b6476;
 }
 
-.todo-form__input {
+.add-item-form__input {
  width: 30ch;
  height: 4ch;
  border: none;
@@ -15,7 +15,7 @@
  font-size: .9rem;
 }
 
-.todo-form__input--desc{
+.add-item-form__input--notes{
   height: 8ch;
   width: 30ch;
   font-family: inherit;
@@ -25,10 +25,10 @@
   resize: none;
 }
 
-.todo-form__input:focus, .todo-form__input:hover, .todo-form__input:active  {
+.add-item-form__input:focus, .add-item-form__input:hover, .add-item-form__input:active  {
   outline: none;
 }
 
-.todo-form__input:hover{
+.add-item-form__input:hover{
   background-color: rgb(180, 253, 229);
 }

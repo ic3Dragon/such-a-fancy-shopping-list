@@ -10,7 +10,7 @@ const getList = () => {
   }
 export const count = signal<number>(0);
 
-export const todos = signal<ListItem []>(getList());
+export const shoppingList = signal<ListItem []>(getList());
 
 export const display = signal<String>('block');
   
