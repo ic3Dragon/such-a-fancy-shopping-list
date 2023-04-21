@@ -1,8 +1,8 @@
 {
-  "name": "react-signal-ts-todo",
+  "name": "such-a-fancy-shopping-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ic3Dragon.github.io/react-signal-ts-todo",
+  "homepage": "https://ic3Dragon.github.io/such-a-fancy-shopping-list",
   "dependencies": {
     "@preact/signals-react": "^1.2.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -25,7 +25,9 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "e2e": "cypress open",
+    "e2e-cli": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^12.10.0"
   }
 }
