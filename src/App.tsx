@@ -4,8 +4,8 @@ import TodoList from './components/TodoList';
 import { ListItem } from './utils/types';
 import Options from './components/Options';
 
-export const updateStorage = (todoList: ListItem[]) => {
-  localStorage.setItem('todos', JSON.stringify(todoList))
+export const updateStorage = (shoppingList: ListItem[]) => {
+  localStorage.setItem('shoppingList', JSON.stringify(shoppingList))
 }
 
 const githubLogo = <svg 
