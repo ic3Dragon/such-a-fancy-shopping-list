@@ -1,16 +1,16 @@
-import './TodoList.scss';
+import './shoppingList.scss';
 import {ListItem} from '../../utils/types'
 import {shoppingList, display} from '../../utils/state';
 import ItemCard from '../ItemCard';
 
-const TodoList = () => {
-  const nrTodosLeft: number = shoppingList.value.filter(todo => todo.bought !== true).length;
-  const completedTodos: number = shoppingList.value.length - nrTodosLeft;
+const ShoppingList = () => {
+  const nrItemsLeft: number = shoppingList.value.filter(item => item.bought !== true).length;
+  const completedTodos: number = shoppingList.value.length - nrItemsLeft;
 
   const checkIfBlock = ():ListItem[] => {
     if(display.value === 'block'){
-      const reOrderedTodos = [...shoppingList.value].sort((a,b) => Number(a.bought) - Number(b.bought));
-      return reOrderedTodos;
+      const reOrderedItems = [...shoppingList.value].sort((a,b) => Number(a.bought) - Number(b.bought));
+      return reOrderedItems;
     }
       return shoppingList.value;
   }
@@ -18,10 +18,10 @@ const TodoList = () => {
   return (
     <>
     <header className="list__header">
-      <h2 className="list__title">{shoppingList.value.length > 0 ? 'All the things' : 'Everything is done for now!'}</h2>
-      {shoppingList.value.length < 1 ? <h3 className="list__text--get-started">- Add some todos and get started! -</h3> : '' }
+      <h2 className="list__title">{shoppingList.value.length > 0 ? '' : 'You bought everything!'}</h2>
+      {shoppingList.value.length < 1 ? <h3 className="list__text--get-started">- Add some new items and get started! -</h3> : '' }
       {completedTodos > 0 && <p className="list__todo-count"> Completed: {completedTodos}</p>}
-      {nrTodosLeft > 0 && <p className="list__todo-count"> Remaing: {nrTodosLeft}</p>}
+      {nrItemsLeft > 0 && <p className="list__todo-count"> Remaing: {nrItemsLeft}</p>}
     </header>
       <section key="todoList" className={`todo-list --${display}`} data-testid="cardList">
         {
@@ -34,4 +34,4 @@ const TodoList = () => {
   )
 }
 
-export default TodoList
+export default ShoppingList

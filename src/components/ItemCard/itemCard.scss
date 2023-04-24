@@ -10,7 +10,7 @@
   height: max-content;
 }
 
-.item--done{
+.item--bought{
   background-color: #a8df8c;
   order: 1;
 
@@ -44,7 +44,11 @@
 // .item__date {}
 
 .item__index-order {
+  text-align: center;
   font-weight: 600;
+  width: 2.5ch;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
 // .item__time {} 
@@ -59,13 +63,13 @@
   margin-top: .6rem;
 }
 
-// .item__done-button {}
+// .item__bought-button {}
 
-/* .item__done-button--done {} */
+/* .item__bought-button--bought {} */
 
 // .item__delete-button {}
 
-.item__delete-button, .item__done-button {
+.item__delete-button, .item__bought-button {
   width: 8ch;
 }
 .item__delete-button:hover {

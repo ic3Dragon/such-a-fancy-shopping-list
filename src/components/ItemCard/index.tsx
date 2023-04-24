@@ -26,7 +26,7 @@ const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}:
   }
   
   return (
-    <article className={`item${bought ? 'item--bought' : ''}`}>
+    <article className={`item ${bought ? 'item--bought' : ''}`}>
       <header className="item__header">
         <p className="item__index-order">{itemIndex +1}</p>
         <p className="item__date">{date} - {time}</p>
@@ -38,7 +38,7 @@ const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}:
         className='button item__bought-button'
         onClick={setDone}
       >
-        {bought ? 'Undo' : 'Done'}
+        {bought ? 'Undo' : 'Bought'}
       </button>
       <button className="button item__edit-button" hidden onClick={editItem}>Edit</button>
       {bought && <button className="button item__delete-button" onClick={deleteItem}>Delete</button>}

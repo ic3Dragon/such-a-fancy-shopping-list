@@ -1,6 +1,6 @@
 import './App.scss';
 import AddItemForm from './components/AddItemForm';
-import TodoList from './components/TodoList';
+import ShoppingList from './components/ShoppingList';
 import { ListItem } from './utils/types';
 import Options from './components/Options';
 
@@ -23,7 +23,7 @@ const App = () => (
       <h1 className="header__title">Shopping List</h1>
     </header>
     <AddItemForm/>
-    <TodoList/>
+    <ShoppingList/>
     <Options />
     <a className="main__github-link" href="https://github.com/ic3Dragon/such-a-fancy-shopping-list" target="_blank" rel="noreferrer">{githubLogo}<p>View the code on GitHub</p></a>
   </main>
