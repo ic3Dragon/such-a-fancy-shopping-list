@@ -37,7 +37,7 @@
 .--grid{
   display: grid;
   gap: 1rem;
-  .todo{
+  .item{
     width: 75vw;
     max-width: 435px;
     min-width: 250px;
@@ -45,7 +45,7 @@
 }
 
 .--block{
-  .todo {
+  .item {
     margin-bottom: 1rem;
   }
 }

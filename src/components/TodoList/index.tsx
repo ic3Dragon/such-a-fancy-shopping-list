@@ -1,7 +1,7 @@
 import './TodoList.scss';
 import {ListItem} from '../../utils/types'
 import {shoppingList, display} from '../../utils/state';
-import TodoCard from '../TodoCard';
+import ItemCard from '../ItemCard';
 
 const TodoList = () => {
   const nrTodosLeft: number = shoppingList.value.filter(todo => todo.bought !== true).length;
@@ -26,7 +26,7 @@ const TodoList = () => {
       <section key="todoList" className={`todo-list --${display}`} data-testid="cardList">
         {
           shoppingList.value && checkIfBlock().map((todo:ListItem, i) => (
-            <TodoCard todo={todo} key={todo.id} todoIndex={i}/>
+            <ItemCard listItem={todo} key={todo.id} itemIndex={i}/>
             ),
         )}
       </section>

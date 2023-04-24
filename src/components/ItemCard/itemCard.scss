@@ -1,4 +1,4 @@
-.todo {
+.item {
   text-align: left;
   background-color: #98cbf3;
   display: flex;
@@ -10,19 +10,19 @@
   height: max-content;
 }
 
-.todo--done{
+.item--done{
   background-color: #a8df8c;
   order: 1;
 
-  .todo__title {
+  .item__title {
     text-decoration:line-through;
   }
-  .todo__desc {
+  .item__desc {
     display: none;
   }
 }
 
- .todo__text {
+ .item__text {
   display: -webkit-box;
   cursor: default;
   overflow: hidden;
@@ -34,22 +34,22 @@
   width: 100%;
  }
 
-.todo__header {
+.item__header {
   display: flex;
   flex-direction: row;
   order: -1;
   width: 100%;
   justify-content: space-between;
 }
-// .todo__date {}
+// .item__date {}
 
-.todo__index-order {
+.item__index-order {
   font-weight: 600;
 }
 
-// .todo__time {} 
+// .item__time {} 
 
-.todo__buttons {
+.item__buttons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -59,15 +59,15 @@
   margin-top: .6rem;
 }
 
-// .todo__done-button {}
+// .item__done-button {}
 
-/* .todo__done-button--done {} */
+/* .item__done-button--done {} */
 
-// .todo__delete-button {}
+// .item__delete-button {}
 
-.todo__delete-button, .todo__done-button {
+.item__delete-button, .item__done-button {
   width: 8ch;
 }
-.todo__delete-button:hover {
+.item__delete-button:hover {
   background-color: rgb(187, 74, 57);
 }
