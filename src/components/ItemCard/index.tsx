@@ -38,7 +38,7 @@ const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}:
         className='button item__bought-button'
         onClick={setDone}
       >
-        {bought ? 'Undo' : 'Bought'}
+        {bought ? 'Undo' : 'Got it!'}
       </button>
       <button className="button item__edit-button" hidden onClick={editItem}>Edit</button>
       {bought && <button className="button item__delete-button" onClick={deleteItem}>Delete</button>}

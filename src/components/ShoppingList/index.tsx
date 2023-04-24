@@ -5,7 +5,7 @@ import ItemCard from '../ItemCard';
 
 const ShoppingList = () => {
   const nrItemsLeft: number = shoppingList.value.filter(item => item.bought !== true).length;
-  const completedTodos: number = shoppingList.value.length - nrItemsLeft;
+  const boughtItems: number = shoppingList.value.length - nrItemsLeft;
 
   const checkIfBlock = ():ListItem[] => {
     if(display.value === 'block'){
@@ -20,13 +20,13 @@ const ShoppingList = () => {
     <header className="list__header">
       <h2 className="list__title">{shoppingList.value.length > 0 ? '' : 'You bought everything!'}</h2>
       {shoppingList.value.length < 1 ? <h3 className="list__text--get-started">- Add some new items and get started! -</h3> : '' }
-      {completedTodos > 0 && <p className="list__todo-count"> Completed: {completedTodos}</p>}
-      {nrItemsLeft > 0 && <p className="list__todo-count"> Remaing: {nrItemsLeft}</p>}
+      {boughtItems > 0 && <p className="list__item-count"> Picked up: {boughtItems}</p>}
+      {nrItemsLeft > 0 && <p className="list__item-count"> Remaing: {nrItemsLeft}</p>}
     </header>
-      <section key="todoList" className={`todo-list --${display}`} data-testid="cardList">
+      <section key="shoppingList" className={`shopping-list --${display}`} data-testid="cardList">
         {
-          shoppingList.value && checkIfBlock().map((todo:ListItem, i) => (
-            <ItemCard listItem={todo} key={todo.id} itemIndex={i}/>
+          shoppingList.value && checkIfBlock().map((item:ListItem, i) => (
+            <ItemCard listItem={item} key={item.id} itemIndex={i}/>
             ),
         )}
       </section>
