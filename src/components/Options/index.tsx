@@ -1,8 +1,8 @@
 import './Options.scss';
 import { display } from '../../utils/state';
+import { Signal } from '@preact/signals-react';
 
-const Options = () => {
-const renderOptionsText = () => {
+const renderOptionsText = (display:Signal<String>) => {
   switch(display.value) {
     case 'flex': 
       return 'Using flex and the order property can be great for accessibility if used correctly. \n\nIn this example, however, the visual order of the elements and the logical order of the elements do not match. If you are using a screenreader or a keyboard to navigate the page the results will be weird.\n\n';
@@ -12,6 +12,8 @@ const renderOptionsText = () => {
       return 'Using JavaScript to order the elements in the array before rendering creates logically and visuall consistency and improves accessibility.\n\n'
   }
 }
+
+const Options = () => {
   return (
     <div className="shopping-list__options">
       <p className="options__title">How do you want to sort your items?</p>
@@ -20,7 +22,7 @@ const renderOptionsText = () => {
         <button className={`options__button button ${display.value === 'flex' ? '--active': ''}`} onClick={()=> display.value = 'flex'}>Use Flex</button>
         <button className={`options__button button ${display.value === 'grid' ? '--active': ''}`} onClick={()=> display.value = 'grid'}>Use Grid</button>
       </ul>
-      <p className="options__text">{renderOptionsText()}Note:  The number in the top left corner of each item shows it's place in the logical order (aka. where it is placed in the html).</p>
+      <p className="options__text">{renderOptionsText(display)}Note:  The number in the top left corner of each item shows it's place in the logical order (aka. where it is placed in the html).</p>
   </div>
 )}
 

@@ -34,20 +34,19 @@ const addItemHandler = (e: React.SyntheticEvent):void => {
   }
 };
 
+const preventNewLineOnEnter = (formElement: React.RefObject<HTMLFormElement>, e: KeyboardEvent<HTMLTextAreaElement>) => {
+  if(e.code === "Enter" && e.shiftKey === false){
+    e.preventDefault();
+    formElement.current?.requestSubmit();
+  }
+};
 
 const AddItemForm = () => {
   const formElement = useRef<HTMLFormElement>(null);
 
-  const preventNewLineOnEnter = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if(e.code === "Enter" && e.shiftKey === false){
-      e.preventDefault();
-      formElement.current?.requestSubmit();
-    }
-  };
-
   return <form onSubmit={addItemHandler} className="add-item-form" ref={formElement}>
     <input type="text" placeholder="What do you need?" className="add-item-form__input" name="title" autoFocus required data-testid="newCardTitle"/>
-    <textarea onKeyDown={preventNewLineOnEnter} placeholder="Notes" className="add-item-form__input add-item-form__input--notes" name="notes" autoComplete="off" data-testid="newCardTitleDesc"/>
+    <textarea onKeyDown={e => preventNewLineOnEnter(formElement, e)} placeholder="Notes" className="add-item-form__input add-item-form__input--notes" name="notes" autoComplete="off" data-testid="newCardTitleDesc"/>
     <button type="submit" className="button" data-testid="addNewCardBtn">Add to list</button>
   </form>
 };
