@@ -9,7 +9,7 @@ const renderOptionsText = (display:Signal<String>) => {
     case 'grid': 
       return 'Using grid and the order property creates the same problem as using flex and order. It can be great for accessibility when you want content to be logically after or bellow something else but visually appear before it. \n\nIn this example, however, the visual order of the elements and the logical order of the elements do not match. Try marking a few items\'s as completed and tabbing between them.\n\n';
     default: 
-      return 'Using JavaScript to order the elements in the array before rendering creates logically and visuall consistency and improves accessibility.\n\n'
+      return 'Using JavaScript to order the elements in the array before rendering creates logically and visual consistency and improves accessibility.\n\n'
   }
 }
 
