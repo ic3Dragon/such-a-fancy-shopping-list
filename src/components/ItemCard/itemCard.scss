@@ -1,19 +1,30 @@
+
 .item {
   text-align: left;
-  background-color: #98cbf3;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  box-shadow: rgb(6, 5, 5, 0.8) 0px 2px 8px 0px;
-  height: max-content;
+  padding: .4rem;
+  border-bottom: 1.2px solid rgb(223, 221, 221);
+  display: flex;
 }
 
-.item--bought{
-  background-color: #a8df8c;
-  order: 1;
+.item__header {
+  display: flex;
+  flex-direction: column;
 
+  .item__text {
+    cursor: default;
+    overflow-wrap: break-word;
+    margin-left: .4rem;
+   }
+  
+  .item__desc {
+    padding-top: .2rem;
+  }
+}
+
+.item--bought {
+  order: 1;
+  
   .item__title {
     text-decoration:line-through;
   }
@@ -22,26 +33,30 @@
   }
 }
 
- .item__text {
-  display: -webkit-box;
-  cursor: default;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  margin-top: .3rem;
-  padding-inline: 1rem;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  width: 100%;
- }
-
-.item__header {
+.item__buttons {
   display: flex;
-  flex-direction: row;
-  order: -1;
+  justify-content: flex-end;
+  gap: 1.2rem;
   width: 100%;
-  justify-content: space-between;
+
+  .item__delete-button {
+    align-self: flex-end;
+  }
+
+  .item__delete-button, .item__bought-button {
+    border: 0;
+    font-weight: 500;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    border-radius: 10px;
+    
+    &:hover {
+      transform:scale(1.2)
+    }
+  }
 }
-// .item__date {}
 
 .item__index-order {
   text-align: center;
@@ -49,30 +64,6 @@
   width: 2.5ch;
   border-radius: 50%;
   border: 1px solid white;
-  margin-left: -3.5rem;
-}
-
-// .item__time {} 
-
-.item__buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 1.2rem;
-  width: 100%;
-  align-self: flex-end;
-  margin-top: .6rem;
-}
-
-// .item__bought-button {}
-
-/* .item__bought-button--bought {} */
-
-// .item__delete-button {}
-
-.item__delete-button, .item__bought-button {
-  width: 8ch;
-}
-.item__delete-button:hover {
-  background-color: rgb(187, 74, 57);
+  margin-left: -3rem;
+  position: absolute;
 }

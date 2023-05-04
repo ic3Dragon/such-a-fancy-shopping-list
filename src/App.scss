@@ -4,13 +4,14 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  gap: 1rem;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -38,8 +39,7 @@
 }
 
 .main__github-link {
-  bottom: 1rem;
-  margin-block: 2rem;
+  margin-block: 1rem;
   justify-self: flex-end;
   font-size: 1rem;
   color: white;
