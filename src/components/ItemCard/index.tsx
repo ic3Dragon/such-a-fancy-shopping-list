@@ -28,21 +28,15 @@ const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}:
   
   return (
     <article className={`item ${bought ? 'item--bought' : ''}`}>
-      <header className="item__header">
-        <p className="item__index-order">{itemIndex +1}</p>
-        <p className="item__date">{date} - {time}</p>
-      </header>
-      <h3 className="item__text item__title">{title}</h3>
+      <p className="item__index-order">{itemIndex + 1}</p>
+      <section className="item__header">
+        <h3 className="item__text item__title">{title}</h3>
       {notes && <p className="item__text item__desc">{notes}</p>}
+      </section>
       <section className="item__buttons">
-      <button 
-        className='button item__bought-button'
-        onClick={e => setDone(id, e)}
-      >
-        {bought ? 'Undo' : 'Got it!'}
-      </button>
-      <button className="button item__edit-button" hidden onClick={editItem}>Edit</button>
-      {bought && <button className="button item__delete-button" onClick={e => deleteItem(id, e)}>Delete</button>}
+      <button className="item__edit-button" hidden onClick={editItem}>Edit</button>
+      <button className='item__bought-button' onClick={e => setDone(id, e)}>{bought ? '⤴️' : '✅'}</button>
+      {bought && <button className="item__delete-button" onClick={e => deleteItem(id, e)}>🗑</button>}
       </section>
     </article>
   )
