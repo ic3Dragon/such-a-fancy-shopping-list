@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/such-a-fancy-shopping-list/static/css/main.0c378a9e.css",
-    "main.js": "/such-a-fancy-shopping-list/static/js/main.c02859af.js",
+    "main.css": "/such-a-fancy-shopping-list/static/css/main.fe0a9503.css",
+    "main.js": "/such-a-fancy-shopping-list/static/js/main.e11ec050.js",
     "index.html": "/such-a-fancy-shopping-list/index.html",
-    "main.0c378a9e.css.map": "/such-a-fancy-shopping-list/static/css/main.0c378a9e.css.map",
-    "main.c02859af.js.map": "/such-a-fancy-shopping-list/static/js/main.c02859af.js.map"
+    "main.fe0a9503.css.map": "/such-a-fancy-shopping-list/static/css/main.fe0a9503.css.map",
+    "main.e11ec050.js.map": "/such-a-fancy-shopping-list/static/js/main.e11ec050.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c378a9e.css",
-    "static/js/main.c02859af.js"
+    "static/css/main.fe0a9503.css",
+    "static/js/main.e11ec050.js"
   ]
 }
