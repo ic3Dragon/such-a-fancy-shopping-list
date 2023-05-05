@@ -35,7 +35,7 @@ const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}:
       </section>
       <section className="item__buttons">
       <button className="item__edit-button" hidden onClick={editItem}>Edit</button>
-      {bought && <button className="item__delete-button" onClick={e => deleteItem(id, e)}>🗑</button>}
+      {bought && <button className="item__delete-button" onClick={e => deleteItem(id, e)}>❌</button>}
       </section>
     </article>
   )
