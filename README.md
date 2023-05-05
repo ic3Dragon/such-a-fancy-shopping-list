@@ -19,13 +19,13 @@ View the deployed app here: [Ic3dragon's Fancy Shopping List](https://ic3dragon.
 
 ## Future Plans
 
-- Add E2E tests so that you can see the effect different display methods have on your testing. And show how to write tests for different options.
-- Setup CI/CD
 - Add edit Item button (started)
 - Add quantity
 - Add category for type of item
 - Add sorting by category
 - Add a button to fully clear list and clear list of bought items
+- Add E2E tests so that you can see the effect different display methods have on your testing. And show how to write tests for different options.
+- Setup CI/CD
 
 Current state of the app:
 
