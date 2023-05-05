@@ -45,8 +45,10 @@ const AddItemForm = () => {
   const formElement = useRef<HTMLFormElement>(null);
 
   return <form onSubmit={addItemHandler} className="add-item-form" ref={formElement}>
-    <input type="text" placeholder="What do you need?" className="add-item-form__input" name="title" autoFocus required data-testid="newCardTitle"/>
-    <textarea onKeyDown={e => preventNewLineOnEnter(formElement, e)} placeholder="Notes" className="add-item-form__input add-item-form__input--notes" name="notes" autoComplete="off" data-testid="newCardTitleDesc"/>
+    <label htmlFor="title" className="add-item-form__input-title-label">What do you need?</label>
+    <input type="text" placeholder="ex. Chocolate" className="add-item-form__input" name="title" autoFocus required data-testid="newCardTitle"/>
+    <label htmlFor="notes" className="add-item-form__input-notes-label">Notes</label>
+    <textarea onKeyDown={e => preventNewLineOnEnter(formElement, e)} placeholder="ex. not the green box, get the blue" className="add-item-form__input add-item-form__input--notes" name="notes" autoComplete="off" data-testid="newCardTitleDesc"/>
     <button type="submit" className="button" data-testid="addNewCardBtn">Add to list</button>
   </form>
 };

@@ -7,6 +7,13 @@
   background-color: #5b6476;
 }
 
+.add-item-form__input-title-label, .add-item-form__input-notes-label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: -.4rem;
+  font-weight: 600;
+}
+
 .add-item-form__input {
  width: 30ch;
  height: 4ch;
