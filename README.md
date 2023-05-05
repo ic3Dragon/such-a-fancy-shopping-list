@@ -27,6 +27,6 @@ View the deployed app here: [Ic3dragon's Fancy Shopping List](https://ic3dragon.
 - Add E2E tests so that you can see the effect different display methods have on your testing. And show how to write tests for different options.
 - Setup CI/CD
 
-Current state of the app:
+### Current state of the app:
 
 ![Screenshot of the app](./public/full-app-screenshot.png)
