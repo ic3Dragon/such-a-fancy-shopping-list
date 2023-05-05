@@ -27,7 +27,7 @@ const editItem = (e: React.SyntheticEvent) => {
 const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}: {listItem: ListItem, itemIndex:number}) => {
   
   return (
-    <article className={`item ${bought ? 'item--bought' : ''}`}>
+    <article onClick={e => setDone(id, e)} className={`item ${bought ? 'item--bought' : ''}`}>
       <p className="item__index-order">{itemIndex + 1}</p>
       <section className="item__header">
         <h3 className="item__text item__title">{title}</h3>
@@ -35,7 +35,6 @@ const ItemCard = ({listItem: {id, title, notes, date, time, bought}, itemIndex}:
       </section>
       <section className="item__buttons">
       <button className="item__edit-button" hidden onClick={editItem}>Edit</button>
-      <button className='item__bought-button' onClick={e => setDone(id, e)}>{bought ? '⤴️' : '✅'}</button>
       {bought && <button className="item__delete-button" onClick={e => deleteItem(id, e)}>🗑</button>}
       </section>
     </article>

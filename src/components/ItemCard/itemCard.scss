@@ -1,6 +1,5 @@
-
-
 .item {
+  cursor: pointer;
   text-align: left;
   align-items: center;
   padding: .4rem;
@@ -14,7 +13,6 @@
   width: 100%;
 
   .item__text {
-    cursor: default;
     overflow-wrap: break-word;
     margin-left: .4rem;
    }
@@ -29,6 +27,8 @@
   
   .item__title {
     text-decoration:line-through;
+    text-decoration-thickness: 3px;
+    text-decoration-color: white;
   }
   .item__desc {
     display: none;
@@ -67,4 +67,5 @@
   border: 1px solid white;
   margin-left: -3rem;
   position: absolute;
+  cursor: default;
 }
